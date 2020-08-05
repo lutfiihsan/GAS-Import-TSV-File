@@ -1,5 +1,5 @@
 function importFromTSV() {
-    var tsvFile = DriveApp.getFilesByName('PET Internal - Sheet1.tsv').next().getBlob().getDataAsString();
+    var tsvFile = DriveApp.getFilesByName('DATA.tsv').next().getBlob().getDataAsString();
     var delim = ",";
     if (tsvFile.indexOf("\t") != -1) delim = "\t";
     var tsvData = Utilities.parsetsv(tsvFile, delim);
